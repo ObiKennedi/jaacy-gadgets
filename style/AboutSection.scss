@@ -1,0 +1,68 @@
+.about-section {
+    padding: 6rem 2rem;
+    background: #fafafa;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #111;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            width: 60px;
+            height: 4px;
+            background: #0070f3;
+            display: block;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+
+            p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                color: #333;
+                margin-bottom: 1.5rem;
+
+                span {
+                    color: #0070f3;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+
+            .image {
+                border-radius: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
