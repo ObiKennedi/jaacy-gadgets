@@ -26,47 +26,11 @@ export const testimonials = [
     review:
       "I love how Jaacyy’s always stocks the latest devices. You can tell they really care about quality, not just selling stuff.",
   },
-  {
-    name: "Kelvin U.",
-    role: "Gamer",
-    review:
-      "Ordered a gaming mouse and keyboard combo — arrived faster than I expected and works perfectly. Customer service was polite too.",
-  },
-  {
-    name: "Ruth I.",
-    role: "Banker",
-    review:
-      "Smooth transaction from start to finish. I like that they respond quickly on WhatsApp. My new smartwatch is exactly what I wanted.",
-  },
-  {
-    name: "David E.",
-    role: "Photographer",
-    review:
-      "Found Jaacyy’s through Instagram — best decision ever. My camera accessories came well packaged and on time. Definitely ordering again.",
-  },
-  {
-    name: "Chisom N.",
-    role: "Student, IMSU",
-    review:
-      "Affordable and reliable! My phone was delivered in great condition and I even got a free case. Thanks Jaacyy’s",
-  },
-  {
-    name: "Michael T.",
-    role: "Software Engineer",
-    review:
-      "Appreciate the honesty — no fake products, no delays. The entire experience felt smooth and professional.",
-  },
-  {
-    name: "Blessing K.",
-    role: "Entrepreneur",
-    review:
-      "Jaacyy’s Gadgets gives that premium feel without the premium price. My tablet works perfectly and the packaging was clean and classy.",
-  },
 ];
 
 export const Testimonial = () =>{
     return(
-        <section className="testimonials-section">
+        <section className="testimonials-section" id="testimonial">
             <h2>What our customer&apos;s have to say</h2>
             <div>
                 {testimonials.map((item, index)=>(

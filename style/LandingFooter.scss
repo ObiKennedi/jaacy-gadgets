@@ -1,0 +1,131 @@
+.landing-footer {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 3rem;
+    gap: 20px;
+    position: relative;
+    bottom: 0;
+
+    .footer-content {
+        display: flex;
+        padding: 20px;
+        height: 45vh;
+        justify-content: space-between;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            width: 310px;
+            display: inline-block;
+
+            @media (max-width: 900px) {
+                width: 100%;
+            }
+
+            >img {
+                width: 60%;
+                height: 170px;
+            }
+        }
+
+        .quick-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            >div {
+                display: flex;
+                flex-direction: column;
+
+                >a {
+                    color: var(--dark-blue);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--deep-peach);
+                    }
+                }
+            }
+        }
+
+        .socials {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            >div {
+                display: flex;
+                gap: 10px;
+
+                >a {
+                    color: var(--dark-blue);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--deep-peach);
+                    }
+                }
+            }
+        }
+
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            >div {
+                position: relative;
+                width: 320px;
+                height: fit-content;
+
+                >input {
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 15px;
+                    outline: none;
+                }
+
+                >button {
+                    position: absolute;
+                    color: white;
+                    background: var(--dark-blue);
+                    width: 100px;
+                    height: 30px;
+                    padding: 5px;
+                    right: 10px;
+                    top: 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    >hr{
+        width: 90%;
+        margin: auto;
+    }
+
+    .rights{
+        margin: auto;
+        text-align: center;
+
+        >p{
+            font-size: 14px;
+
+            a{
+                color: var(--dark-blue);
+                text-decoration: none;
+
+                &:hover{
+                    color: var(--deep-peach);
+                }
+            }
+        }
+    }
+}

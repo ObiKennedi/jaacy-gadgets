@@ -1,3 +1,4 @@
+import { LandingFooter } from "@/components/LandingFooter"
 import { LandingNav } from "@/components/LandingNav"
 import { About } from "@/sections/about"
 import { Hero } from "@/sections/hero"
@@ -16,6 +17,7 @@ const Home = () =>{
         <ValueProp/>
         <Testimonial/>
       </main>
+      <LandingFooter/>
     </>
   )
 }

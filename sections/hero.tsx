@@ -34,7 +34,7 @@ export const Hero = () => {
                     </p>
                     <p>Buy once <span>=</span> Buy right.</p>
                 </div>
-                <div>
+                <div className='button-container'>
                     <button onClick={() => (window.location.href = "/shop")}>Shop now</button>
                     <button onClick={() => (window.location.href = "/about")}>Learn more</button>
                 </div>
