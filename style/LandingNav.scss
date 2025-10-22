@@ -76,13 +76,20 @@
             li {
                 list-style: none;
                 display: inline-block;
-
-                >a {
+                .nav-link {
                     color: var(--blue);
                     text-decoration: none;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid transparent;
+                    transition: border-color 0.3s ease, color 0.3s ease;
 
                     &:hover {
                         color: var(--mid-blue);
+                    }
+
+                    &.active {
+                        border-bottom: 2px solid var(--dark-blue); 
+                        color: var(--dark-blue);
                     }
                 }
             }

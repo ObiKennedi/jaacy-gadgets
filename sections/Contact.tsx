@@ -64,7 +64,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact-section" id="contact">
+        <section className="contact-section" >
             <video autoPlay muted loop playsInline className="background-video">
                 <source src="/video/gvid2.mp4" type="video/mp4" />
             </video>
