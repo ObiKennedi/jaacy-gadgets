@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import "@/style/LandingNav.scss"
 
@@ -20,10 +20,11 @@ export const LandingNav = () => {
 
     const [open, setOpen] = useState(false);
     const pathname = usePathname()
+    const router = useRouter()
 
     return (
         <header className="landing-nav">
-            <div>
+            <div onClick={() => router.push("/")}>
                 <Image
                     src="/logo/jaacys-logo.png"
                     width={300}
