@@ -1,10 +1,43 @@
+"use client"
+
+import React, { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import emailjs from "@emailjs/browser"
 import "@/style/LandingFooter.scss"
 import { } from "lucide-react"
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaXTwitter } from "react-icons/fa6";
 
 export const LandingFooter = () => {
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState("");
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("Sending...");
+
+        try {
+            const result = await emailjs.sendForm(
+                "service_ot793np", 
+                "template_evrg1gu", 
+                formRef.current!,
+                "W818QjzEI61Uw8ju7"
+            );
+
+            if (result.text === "OK") {
+                setStatus("Subscribed!");
+                setEmail("");
+            } else {
+                throw new Error("Failed to send");
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus("Error, try again");
+        } finally {
+            setTimeout(() => setStatus(""), 3000);
+        }
+    };
     return (
         <footer className="landing-footer">
             <div className="footer-content">
@@ -46,12 +79,13 @@ export const LandingFooter = () => {
                         </a>
                     </div>
                 </div>
-                <form className="subscribe">
+                <form className="subscribe" ref={formRef} onSubmit={handleSubmit}>
                     <h2>Stay in touch</h2>
                     <div>
-                        <input type="text" placeholder="Your email address" />
+                        <input type="email" name="user_email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" />
                         <button>Subscribe</button>
                     </div>
+                    {status && <p className="status">{status}</p>}
                 </form>
             </div>
             <hr />
