@@ -86,6 +86,7 @@
 
                     &:hover {
                         color: var(--mid-blue);
+                        border-bottom: 2px solid var(--dark-blue); 
                     }
 
                     &.active {
