@@ -18,17 +18,19 @@ export const About = () => {
                 <div className="about-text" data-aos="fade-right">
                     <p>
                         At <span>Jaacyy’s Gadgets</span>, we believe technology should make life easier,
-                        smarter, and more exciting. We bring you the latest, high-quality gadgets
-                        at unbeatable prices — from everyday essentials to the newest tech innovations.
+                        smarter, and more exciting. We bring you the latest, high quality gadgets
+                        at unbeatable prices from everyday essentials to the newest tech innovations.
                         Our mission is simple: deliver value, reliability, and an exceptional shopping
                         experience to every customer, every time.
                     </p>
                     <p>
-                        <span>Jaacyy’s Gadgets</span> is more than a store — it’s your plug for everything tech.
+                        <span>Jaacyy’s Gadgets</span> is more than a store it’s your plug for everything tech.
                         Whether you’re upgrading your setup, shopping for smart accessories, or looking
-                        for the next cool device, we’ve got you covered. We blend quality, affordability,
-                        and style so you can enjoy the best of technology without breaking the bank.
+                        for the next cool device, we’ve got you <span>...</span>
                     </p>
+                    <div>
+                        <button onClick={() => (window.location.href = "/about")}>Learn more</button>
+                    </div>
                 </div>
 
                 <div className="about-image" data-aos="fade-left">

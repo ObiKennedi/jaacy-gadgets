@@ -4,24 +4,27 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 import "@/style/LandingNav.scss"
 
 const LandingNavLinks = [
     { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "About", href: "#about" },
+    { id: 2, name: "About", href: "/about" },
     { id: 3, name: "shop", href: "/shop" },
-    { id: 4, name: "Contact", href: "#contact" },
+    { id: 4, name: "Contact", href: "/contact" },
     { id: 5, name: "Blog", href: "/blog" }
 ]
 
 export const LandingNav = () => {
 
     const [open, setOpen] = useState(false);
+    const pathname = usePathname()
+    const router = useRouter()
 
     return (
         <header className="landing-nav">
-            <div>
+            <div onClick={() => router.push("/")}>
                 <Image
                     src="/logo/jaacys-logo.png"
                     width={300}
@@ -36,11 +39,19 @@ export const LandingNav = () => {
 
             <nav className={open ? "close" : "open"}>
                 <ul>
-                    {LandingNavLinks.map((item)=>(
-                        <li key={item.id}>
-                            <Link href={item.href}>{item.name}</Link>
-                        </li>
-                    ))}
+                    {LandingNavLinks.map((item) => {
+                        const isActive = pathname === item.href; 
+                        return (
+                            <li key={item.id}>
+                                <Link
+                                    href={item.href}
+                                    className={`nav-link ${isActive ? "active" : ""}`} 
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 <button onClick={() => (window.location.href = "/register")}>Get started</button>
