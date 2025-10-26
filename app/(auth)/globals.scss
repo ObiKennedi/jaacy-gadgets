@@ -1,0 +1,69 @@
+.auth-layout {
+  position: relative;
+  min-height: 100vh;
+  padding: 3.5rem 8vw;
+  background: #000000b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  // BACKGROUND VIDEO
+  >video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.45);
+  }
+
+  button {
+    background: var(--dark-blue);
+    border: none;
+    text-align: center;
+    padding: 20px;
+    color: var(--peach);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  button.pending {
+    background: var(--mid-blue);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(2, 30, 64, 0.25);
+  }
+
+  .glass:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(2, 30, 64, 0.3);
+  }
+
+  a{
+    color: var(--peach);
+    text-decoration: none;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 2.5rem 5vw;
+  }
+
+  @media (max-width: 900px) {
+    padding: 2rem 4vw;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 5vw;
+  }
+}

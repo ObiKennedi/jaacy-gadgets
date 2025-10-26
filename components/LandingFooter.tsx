@@ -82,7 +82,12 @@ export const LandingFooter = () => {
                 <form className="subscribe" ref={formRef} onSubmit={handleSubmit}>
                     <h2>Stay in touch</h2>
                     <div>
-                        <input type="email" name="user_email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" />
+                        <input 
+                            type="email" 
+                            name="user_email" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" 
+                        />
                         <button>Subscribe</button>
                     </div>
                     {status && <p className="status">{status}</p>}
@@ -91,7 +96,7 @@ export const LandingFooter = () => {
             <hr />
             <div className="rights">
                 <p>&copy; {new Date().getFullYear()} Jaacyy&apos;s Gadgets. All rights reserved</p>
-                <p>Built by <a href="/dexter-lahb.com">Dexter&apos;s Lahb</a></p>
+                <p>Built by <a href="dexter-lahb.com">Dexter&apos;s Lahb</a></p>
             </div>
         </footer>
     )
